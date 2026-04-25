@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
     allowedHosts: [
-      "https://web-tech-chatbot.vercel.app/",
+      "https://web-tech-chatbot.onrender.com",
       "metrological-leana-fleecily.ngrok-free.dev"
     ],
     proxy: {
