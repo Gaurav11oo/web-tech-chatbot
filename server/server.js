@@ -43,8 +43,8 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // ✅ FIXED ROUTES
-app.use("/api", require("./routes/chatRoutes"));
-app.use("/api", require("./routes/knowledgeRoutes"));
+app.use("/api/chat", require("./routes/chatRoutes"));
+app.use("/api/knowledge", require("./routes/knowledgeRoutes"));
 
 app.get("/api/health", (_req, res) =>
   res.json({ status: "OK", timestamp: new Date().toISOString() })
