@@ -5,14 +5,20 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+
+    // ✅ only domain names (no https)
     allowedHosts: [
-      "https://web-tech-chatbot.onrender.com",
-      "metrological-leana-fleecily.ngrok-free.dev"
+      "web-tech-chatbot.onrender.com",
+      "web-tech-chatbot.vercel.app",
+      "metrological-leana-fleecily.ngrok-free.dev",
     ],
+
+    // ✅ ONLY for local development
     proxy: {
       "/api": {
         target: "https://web-tech-chatbot.onrender.com",
         changeOrigin: true,
+        secure: true,
       },
     },
   },
